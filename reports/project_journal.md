@@ -363,3 +363,47 @@ Results:
 
 Conclusion:
 CA-CFAR reduces false alarms compared to simple peak detection, but its performance depends strongly on threshold factor, guard cells, training cells, target amplitude, and noise. Further tuning is required for reliable detection of weaker/nearby targets.
+
+### Step 29
+
+Started Range-Doppler processing.
+
+Implemented:
+- radar data matrix with 64 chirps and 256 samples per chirp
+- moving target simulation with range and velocity
+- Range FFT across fast-time samples
+- Doppler FFT across chirps
+- Doppler FFT shift
+- Range-Doppler heatmap visualization
+
+Conclusion:
+The pipeline now produces a Range-Doppler Map, which is the foundation for estimating both target distance and velocity.
+
+
+### Step 30
+
+Fixed Range-Doppler velocity estimation by using complex radar signals and applying Doppler FFT on the complex Range FFT output.
+
+Results:
+
+- True range: 50 m
+- Estimated range: 50.0 m
+- True velocity: 10 m/s
+- Estimated velocity: 9.89 m/s
+
+Conclusion:
+The Range-Doppler pipeline can now estimate both target distance and velocity.
+
+
+### Step 31
+
+Updated the Range-Doppler map visualization.
+
+Improvements:
+- Converted x-axis from range bins to range in meters
+- Converted y-axis from Doppler bins to velocity in m/s
+- Added marker at detected target location
+
+Detected target:
+- Range ≈ 50 m
+- Velocity ≈ 9.89 m/s
