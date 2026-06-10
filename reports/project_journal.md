@@ -13,7 +13,7 @@ Build a radar perception pipeline including:
 
 ---
 
-## Week 1
+## Week 1 — FMCW Fundamentals and Range Estimation
 
 ### Step 1
 Created project structure.
@@ -163,6 +163,10 @@ MAE = 0.0125 m
 Conclusion:
 The FFT-based range estimation pipeline achieved approximately 1.25 cm average distance error for 20 m, 50 m, and 80 m targets.
 
+
+---
+
+## Week 2 — Multi-Target Detection and CFAR
 
 ### Step 15
 
@@ -364,6 +368,10 @@ Results:
 Conclusion:
 CA-CFAR reduces false alarms compared to simple peak detection, but its performance depends strongly on threshold factor, guard cells, training cells, target amplitude, and noise. Further tuning is required for reliable detection of weaker/nearby targets.
 
+---
+
+## Week 3 — Range-Doppler Processing and Velocity Estimation
+
 ### Step 29
 
 Started Range-Doppler processing.
@@ -410,7 +418,7 @@ Detected target:
 
 ---
 
-## Week 2
+## Week 4 — Dataset Generation, Deep Learning, and Performance Evaluation
 
 ### Step 32
 
